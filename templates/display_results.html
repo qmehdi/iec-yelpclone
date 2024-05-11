@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Display Results Page
+        </title>
+    </head>
+
+    <body>
+        Here are your top 3 recommendations for {{ term }} in {{ location }}
+        {% for each_business in establishments %}
+        <li><h3> {{ each_business.name }} </h3>
+            <h5>{{ each_business.rating }} </h5>
+            <h5> {{ each_business.location.display_address }} </h5>
+            <h5> {{ each_business.display_phone }} </h5>
+        </li>
+        {% endfor %}
+    </body>
+</html>
