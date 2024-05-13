@@ -7,7 +7,8 @@ def search_businesses(search_term, search_location):
     url = "https://api.yelp.com/v3/businesses/search"
 
     my_headers = {
-        "Authorization": "Bearer {}".format(api_key)
+        "Authorization": "Bearer {}".format(api_key),
+        "User-Agent": "Mozilla/5.0"
     }
 
     my_params = {
